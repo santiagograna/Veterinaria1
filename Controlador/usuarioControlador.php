@@ -17,3 +17,10 @@ class UsuarioControlador{
     }
 
 }
+
+if (isset($_POST["iniciarSesion"]) == "ok") {
+    $objUsuario = new UsuarioControlador();
+    $objUsuario->documento = $_POST["documento"];
+    $objUsuario->password = $_POST["password"];
+    $objUsuario->ctrIniciarSesion();
+}
